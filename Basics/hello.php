@@ -170,6 +170,38 @@
                 It is the storing of a reference to functions and resources external to PHP.
                 A common example of using the resource data type is a database call.
             */
+
+            // php numbers
+            $minVal  = PHP_INT_MIN;
+            $maxVal  = PHP_INT_MAX;
+            $intSize = PHP_INT_SIZE;
+
+            echo("<p>$minVal" . var_dump(is_int($minVal)) . "</p>");
+            echo("<p>$maxVal" . var_dump(is_int($maxVal)) . "</p>");
+            echo("<p>$intSize" . var_dump(is_int($intSize)) . "</p>");
+
+            $minfVal = PHP_FLOAT_MIN;
+            $maxfVal = PHP_FLOAT_MAX; // smallest representable positive nunber
+            $maxNegativeFVal = -PHP_FLOAT_MAX; // smallest representable negative nunber
+            $desimalDigitVal = PHP_FLOAT_DIG; // The number of decimal digits that can be rounded into a float and back without precision loss
+            $smallestRepNum = PHP_FLOAT_EPSILON; // The smallest representable positive number x, so that x + 1.0 != 1.0
+
+            echo("<p>$minfVal" . var_dump(is_float($minfVal)) . "</p>");
+            echo("<p>$maxfVal" . var_dump(is_float($maxfVal)) . "</p>");
+            echo("<p>$maxNegativeFVal" . var_dump(is_float($maxNegativeFVal)) . "</p>");
+            echo("<p>$desimalDigitVal" . var_dump(is_float($desimalDigitVal)) . "</p>");
+            echo("<p>$smallestRepNum" . var_dump(is_float($smallestRepNum)) . "</p>");
+
+            // PHP Constants
+            // Constants are like variables except that once they are defined they cannot be changed or undefined.
+            define("GREETING", "<p>Good morning</p>");
+            echo GREETING;
+            // echo greeting; // this will not work since by default constants are case sensitive.
+            // if we need case insesitive constant, define should include the 3rd paramiter as true
+            define("WELCOME", "<p>Welcome you all!!!</p>", true);
+            echo WELCOME;
+            // echo welcome; // somehow this is not working :(
+
         ?>    
     </body>
 </html>
