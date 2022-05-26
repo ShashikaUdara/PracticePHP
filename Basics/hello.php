@@ -57,11 +57,46 @@
             {
                 global $a, $b, $c;
                 $sumL = $a + $b;
-                echo("<p>(Local) - $c $a and $b is $sumL</p>");
+                echo("<p>(Local) - $c a and b is $sumL</p>");
             }
             test_func3();
             $sumG = $a + $b;
-            echo("<p>(Global) - $c $a and $b is $sumG</p>");
+            echo("<p>(Global) - $c a and b is $sumG</p>");
+
+            // accessing global variables using GLOBALS array
+            function test_func4()
+            {
+                $sum2L = $GLOBALS['a'] + $GLOBALS['b'];
+                echo("(Local-Using GLOBALS array) $c a and b is $sum2L</p>");
+            }
+            test_func4();
+
+            // PHP The static Keyword - statically defined local variable NOT to be deleted.
+            function test_func5()
+            {
+                static $count = 0; // statically defined varable been initialaized once to 0. 
+                                   // When the next function call comes it will not be initialized again to 0
+                                   // since its a static variable
+                echo("Count: $count<br>");
+                $count++;
+            }
+
+            $iter = 0;
+            while($iter <= 10)
+            {
+                test_func5();
+                $iter++;
+            }
+
+            // php print
+            $txt1 = "I love coding";
+            $txt2 = "I love php";
+            print "<p>This is 'print' without paranthasis</p>";
+            print("<p>This is 'print' with paracnthasis</p>");
+            print("<h2>" . $txt1 . "</h2>");
+            print($txt2 . " scripting language.<br>");
+            print($txt1 . ", " . $txt2);
+            print("<p>The sum of a and b is: ". $a + $b . "</p>")
         ?>
     </body>
 </html>
