@@ -96,7 +96,80 @@
             print("<h2>" . $txt1 . "</h2>");
             print($txt2 . " scripting language.<br>");
             print($txt1 . ", " . $txt2);
-            print("<p>The sum of a and b is: ". $a + $b . "</p>")
-        ?>
+            print("<p>The sum of a and b is: ". $a + $b . "</p>");
+
+            // data types
+            // var_dump() function can return the data type
+            $num = 5432;
+            $str = "My name is Udara";
+            $status = TRUE;
+            $height = 178.35;
+            $vehicals = array("Nissan", "Toyota", "BMW", "Audi");
+            
+            var_dump($num);
+            echo "<br>";
+            var_dump($str);
+            echo "<br>";
+            var_dump($status);
+            echo "<br>";
+            var_dump($height);
+            echo "<br>";
+            var_dump($vehicals);
+            echo "<br><br><br>";
+
+            // PHP Object
+            class Vehicle
+            {
+                public $color;
+                public $model;
+                public function __construct($color, $model)
+                {
+                    $this->color = $color;
+                    $this->model = $model;
+                }
+
+                public function message()
+                {
+                    return "My car is a " . $this->color . " " . $this->model;
+                }
+            }
+
+            $myCar1 = new Vehicle("Silver", "Nissan");
+            $myCar2 = new Vehicle("White", "Toyota");
+            $myCar3 = new Vehicle("Black", "BMW");
+            $myCar4 = new Vehicle("White", "Audi");
+            var_dump($myCar1);
+            echo "<br>";
+            var_dump($myCar2);
+            echo "<br>";
+            var_dump($myCar3);
+            echo "<br>";
+            var_dump($myCar4);
+            echo "<br><br>";
+            echo("<p>" . $myCar1->message() . "</p>");
+            echo("<p>" . $myCar2->message() . "</p>");
+            echo("<p>" . $myCar3->message() . "</p>");
+            echo("<p>" . $myCar4->message() . "</p>");
+
+            // PHP NULL Value
+            // variable create without any value holds the data type NULL
+            $tempVar;
+            var_dump($tempVar);
+            echo "<br>";
+            $tempVar = "Now this is a string";
+            var_dump($tempVar);
+            echo "<br>";
+            $tempVar = null;
+            // tempVar has been emptied using null key word
+            var_dump($tempVar);
+            echo "<br>";
+
+            /*
+                PHP Resource
+                The special resource type is not an actual data type. 
+                It is the storing of a reference to functions and resources external to PHP.
+                A common example of using the resource data type is a database call.
+            */
+        ?>    
     </body>
 </html>
