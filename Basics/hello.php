@@ -202,6 +202,36 @@
             echo WELCOME;
             // echo welcome; // somehow this is not working :(
 
+            // PHP Conditional Assignment Operators
+            $brand = "Nissan";
+            $status = ($brand == "Nissan")? "Yes, it's Nissan" : "No, it's no Nissan";
+            echo("</p>$status</p>");
+
+            $status = empty($user)? "User is Annonymous" : "User has a name";
+            echo("</p>$status</p>");
+
+            $user = "Udara Abeyrathne";
+            $status = empty($user)? "User is Annonymous" : "User has a name";
+            echo("</p>$status</p>");
+
+            // PHP Array Operators
+            $arr1 = array("1"=>"one", "2"=>"two", "3"=>"three", "4"=>"four");
+            $arr2 = array("5"=>"five", "6"=>"six", "7"=>"seven", "8"=>"eight");
+
+            // union
+            echo("union: ");
+            print_r($arr1 + $arr2);
+            echo "<br>";
+            
+            // equality
+            echo("equality: ");
+            var_dump($arr1 == $arr2);
+            echo "<br>";
+
+            // identity
+            echo("identity: ");
+            var_dump($arr1 === $arr2);
+            echo "<br>";
         ?>    
     </body>
 </html>
