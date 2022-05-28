@@ -232,6 +232,44 @@
             echo("identity: ");
             var_dump($arr1 === $arr2);
             echo "<br>";
+            
+            // not equel to
+            echo("not equel to: ");
+            var_dump($arr1 <> $arr2);
+            echo "<br>";
+
+            // PHP String Operators
+            $firstname = "Udara";
+            $lastName = "Abeyrathne";
+
+            // concatination
+            echo("concatination: ");
+            echo($firstname.$lastName);
+            echo "<br>";
+
+            // 	Concatenation assignment - append strings
+            echo("Concatenation assignment: ");
+            $firstname .= $lastName;
+            echo($firstname);
+            echo "<br>";
+
+            // PHP Comparison Operators
+            // spaceship
+            $val1 = 5;
+            $val2 = 10;
+            echo($val1 <=> $val2); // returns -1 ($val1 < $val2)
+            echo "<br>";
+
+            $val1 = 10;
+            $val2 = 10;
+            echo($val1 <=> $val2); // returns 0 ($val1 = $val2)
+            echo "<br>";
+
+            $val1 = 15;
+            $val2 = 10;
+            echo($val1 <=> $val2); // returns +1 ($val1 > $val2)
+            echo "<br>";
+
         ?>    
     </body>
 </html>
