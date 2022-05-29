@@ -29,6 +29,11 @@
         <br>
         <br>
 
+        <a href="test_get.php?name=Udara Abeyrathne&proffession=Developer">Click here to know me</a>
+        <br>
+        <br>
+        <br>
+
         <?php
             $txt = "PHP scripting language";
             echo "I love $txt!<br>";
