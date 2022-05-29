@@ -5,10 +5,29 @@
 
         <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
             Name:<input type="text" name="file_name">
+            <br>
             Address:<input type="text" name="file_address">
+            <br>
             Phone:<input type="text" name="file_phone">
+            <br>
             <input type="submit">
         </form>
+        <br>
+        <br>
+        <br>
+
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+            School:<input type="text" name="file_school">
+            <br>
+            University:<input type="text" name="file_uni">
+            <br>
+            Company:<input type="text" name="file_company">
+            <br>
+            <input type="submit">
+        </form>
+        <br>
+        <br>
+        <br>
 
         <?php
             $txt = "PHP scripting language";
@@ -372,6 +391,7 @@
                 if(empty($name) || empty($address) || empty($phone))
                 {
                     echo("Please fill all the fields");
+                    echo "<br>";
                 }
                 else
                 {
@@ -380,6 +400,29 @@
                     echo($address);
                     echo "<br>";
                     echo($phone);
+                    echo "<br>";
+                }
+            }
+
+            // PHP $_POST - sed to collect form data after submitting an HTML form with method="post". $_POST is also widely used to pass variables.
+            if($_SERVER["REQUEST_METHOD"] == "POST")
+            {
+                // collect value from the input field
+                $school = $_POST["file_school"];
+                $university = $_POST["file_uni"];
+                $company = $_POST["file_company"];
+                if(empty($school) || empty($university) || empty($company))
+                {
+                    echo("Please fill all the fields");
+                    echo "<br>";
+                }
+                else
+                {
+                    echo($school);
+                    echo "<br>";
+                    echo($university);
+                    echo "<br>";
+                    echo($company);
                     echo "<br>";
                 }
             }
