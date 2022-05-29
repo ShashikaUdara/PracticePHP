@@ -320,6 +320,38 @@
             }
             echo "<br>";
 
+            // PHP Global Variables - Superglobals - they are always accessible, regardless of scope
+            // PHP Superglobal - $GLOBALS
+
+            // defining global variable
+            $firstName = "Udara";
+            $age = 31;
+
+            function access_names()
+            {
+                $GLOBALS["both"] = $GLOBALS["firstName"] . "-" . $GLOBALS["age"];
+            }
+
+            access_names();
+            // $both created while calling the GLOABLS
+            echo($both);
+            echo "<br>";
+            echo "<br>";
+
+            // PHP Superglobal - $_SERVER - variables that are always available in all scopes.
+            // holds information about headers, paths, and script locations
+            echo "PHP_SELF- " . $_SERVER['PHP_SELF'];
+            echo "<br>";
+            echo "SERVER_NAME- " . $_SERVER['SERVER_NAME'];
+            echo "<br>";
+            echo "HTTP_HOST- " . $_SERVER['HTTP_HOST'];
+            echo "<br>";
+            echo "HTTP_REFERER- " . $_SERVER['HTTP_REFERER'];
+            echo "<br>";
+            echo "HTTP_USER_AGENT- " . $_SERVER['HTTP_USER_AGENT'];
+            echo "<br>";
+            echo "SCRIPT_NAME- " . $_SERVER['SCRIPT_NAME'];
+            echo "<br>";
         ?>    
     </body>
 </html>
