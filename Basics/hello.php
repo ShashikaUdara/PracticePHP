@@ -3,6 +3,13 @@
     <body>
         <h1>My first PHP page</h1>
 
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+            Name:<input type="text" name="file_name">
+            Address:<input type="text" name="file_address">
+            Phone:<input type="text" name="file_phone">
+            <input type="submit">
+        </form>
+
         <?php
             $txt = "PHP scripting language";
             echo "I love $txt!<br>";
@@ -352,6 +359,30 @@
             echo "<br>";
             echo "SCRIPT_NAME- " . $_SERVER['SCRIPT_NAME'];
             echo "<br>";
+            echo "<br>";
+            echo "<br>";
+
+            // PHP $_REQUEST - collect data after submitting an HTML form
+            if($_SERVER["REQUEST_METHOD"] == "POST")
+            {
+                // collect value from the input field
+                $name = $_REQUEST["file_name"];
+                $address = $_REQUEST["file_address"];
+                $phone = $_REQUEST["file_phone"];
+                if(empty($name) || empty($address) || empty($phone))
+                {
+                    echo("Please fill all the fields");
+                }
+                else
+                {
+                    echo($name);
+                    echo "<br>";
+                    echo($address);
+                    echo "<br>";
+                    echo($phone);
+                    echo "<br>";
+                }
+            }
         ?>    
     </body>
 </html>
