@@ -270,6 +270,56 @@
             echo($val1 <=> $val2); // returns +1 ($val1 > $val2)
             echo "<br>";
 
+            // PHP Conditional Statements
+            $now_time = date("H");
+            echo("<p>" . $now_time . "</p>");
+            if($now_time < 12)
+            {
+                echo("<p>good morning</p>");
+            }
+
+            // sorting
+            $cars = array("Volvo", "BMW", "Toyota", "Nissan", "Apple", "Cat");
+            sort($cars);
+
+            $clength = count($cars);
+            for($x = 0; $x < $clength; $x++) {
+              echo $cars[$x];
+              echo "<br>";
+            }
+
+            echo "<br>";
+
+            $numbers = array(4, 6, 2, 22, 11);
+            rsort($numbers);
+
+            $clength = count($numbers);
+            for($x = 0; $x < $clength; $x++) {
+              echo $numbers[$x];
+              echo "<br>";
+            }
+            echo "<br>";
+
+            // asort (According to Value) and ksort (According to Key) - acending
+            $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43", "Udara"=>"31", "Jimi"=>"30");
+            asort($age);
+
+            foreach($age as $x => $x_value) 
+            {
+                echo "Key=" . $x . ", Value=" . $x_value;
+                echo "<br>";
+            }
+            echo "<br>";
+
+            krsort($age); // revers (decending order)
+
+            foreach($age as $x => $x_value) 
+            {
+                echo "Key=" . $x . ", Value=" . $x_value;
+                echo "<br>";
+            }
+            echo "<br>";
+
         ?>    
     </body>
 </html>
