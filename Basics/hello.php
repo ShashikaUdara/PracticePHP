@@ -81,7 +81,7 @@
             // using global keyword you can use globally defind variables inside the functions
             // a, b and c are globle variables
             $a = 12;
-            $b = 6; 
+            $b = 6;
             $c = "The sum of";
 
             function test_func3()
