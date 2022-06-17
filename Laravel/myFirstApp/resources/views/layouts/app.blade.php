@@ -23,9 +23,10 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    <div><img src="svg/freeCodeCampLogo.svg" style="height: 20px; border-right: 1px solid #333333;" class="pr-3"></div>
-                    <div class="pl-3">MyApp</div>
+                <a class="navbar-brand d-flex" href="{{ url('/') }}">
+                    <!-- {{ config('app.name', 'Udara') }} -->
+                    <div><img src="/svg/freeCodeCampLogo.svg" alt="myLogo" style="height: 25px; padding-right: 5px;"></div>
+                    <div style="border-left: 1px solid #333333; padding-left: 5px;">Udara Abeyrathne</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
