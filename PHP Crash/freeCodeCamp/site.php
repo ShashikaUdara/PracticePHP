@@ -8,6 +8,7 @@
   <body>
     <?php
       echo("Hello World");
+      echo("My name is Udara Abeyrathne");
      ?>
   </body>
 </html>
