@@ -50,6 +50,12 @@
       // user str_replace function
       echo("<br>");
       echo(str_replace("Jhis", "Apple", $phrase));
+
+      // substring
+      echo("<br>");
+      echo(substr($phrase, 5));
+      echo("<br>");
+      echo(substr($phrase, 5, 6));
      ?>
   </body>
 </html>
