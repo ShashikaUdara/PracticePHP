@@ -20,7 +20,7 @@
 
       // data types
       // strings
-      $phrase = "this is a string";
+      $phrase = "This Is a String";
       $number = 12;
       $volumn = 3.456;
       $isFull = true;
@@ -28,6 +28,28 @@
       //displaying the data
       echo("<br>");
       echo($phrase . " " . $number . " " . $volumn . " " . $isFull);
+      echo("<br>");
+
+      // strings - using the $phrase as the example
+      // setting all to lower and upper case
+      echo(strtolower($phrase));
+      echo("<br>");
+      echo(strtoupper($phrase));
+      // string length
+      echo("<br>");
+      echo(strlen($phrase));
+      // getting the first and second chars of the string
+      echo("<br>");
+      echo($phrase[0] . $phrase[1]);
+
+      // replacing character
+      echo("<br>");
+      $phrase[0] = "J";
+      echo($phrase);
+
+      // user str_replace function
+      echo("<br>");
+      echo(str_replace("Jhis", "Apple", $phrase));
      ?>
   </body>
 </html>
