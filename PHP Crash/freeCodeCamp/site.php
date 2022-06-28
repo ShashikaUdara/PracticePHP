@@ -13,6 +13,10 @@
       echo("<p>This is my site</p>");
 
       // variables
+      $characterName = "Udara Abeyrathne";
+      $characterAge = 31;
+
+      echo($characterName . " - " . $characterAge);
      ?>
   </body>
 </html>
