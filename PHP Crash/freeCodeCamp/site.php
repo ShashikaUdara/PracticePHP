@@ -7,8 +7,12 @@
   </head>
   <body>
     <?php
-      echo("Hello World");
-      echo("My name is Udara Abeyrathne");
+      echo("Hello World<br>");
+      echo("<h1>My name is Udara Abeyrathne</h1>");
+      echo("<hr>");
+      echo("<p>This is my site</p>");
+
+      // variables
      ?>
   </body>
 </html>
