@@ -17,6 +17,17 @@
       $characterAge = 31;
 
       echo($characterName . " - " . $characterAge);
+
+      // data types
+      // strings
+      $phrase = "this is a string";
+      $number = 12;
+      $volumn = 3.456;
+      $isFull = true;
+
+      //displaying the data
+      echo("<br>");
+      echo($phrase . " " . $number . " " . $volumn . " " . $isFull);
      ?>
   </body>
 </html>
