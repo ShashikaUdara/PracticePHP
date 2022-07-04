@@ -56,6 +56,26 @@
       echo(substr($phrase, 5));
       echo("<br>");
       echo(substr($phrase, 5, 6));
+
+      // numbers
+      $num = 10;
+      echo("<br>");
+      echo($num);
+      echo("<br>");
+      echo($num++);
+      echo("<br>");
+      echo($num--);
+      echo("<br>");
+      echo($num-- * 25);
+      echo("<br>");
+      echo(min(5, 6));
+      echo("<br>");
+      echo(max(5, 6));
+      echo("<br>");
+      echo(sqrt(144));
+      echo("<br>");
+      echo(pow(564));
+
      ?>
   </body>
 </html>
